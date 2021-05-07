@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Alta Libro</title>
+</head>
+<body>
+    <h1>Alta de un nuevo libro</h1>
+     <form th:action="@{/libro/guardar}" th:object="${libro}" method="post">
+     <label for="codigo">Codigo de Libro</label>   
+        <input type="number" id="codigo" th:field="*{codigo}"/>
+        <br>
+        <label for="isbn">Isbn de Libro</label>   
+        <input type="text" id="isbn" th:field="*{isbn}" placeholder="Ingrese isbn"/>
+        <br>
+        <label for="titulo">Titulo del Libro</label>   
+        <input type="text" id="titulo" th:field="*{titulo}" placeholder="Ingrese titulo"/>
+        <br>
+        <label for="cantPaginas">Cantidad de Paginas</label>   
+        <input type="number" id="cantPaginas" th:field="*{cantPaginas}"/>
+        <br>
+        <label for="anio">Año de publicacion</label>   
+        <input type="number" id="anio" th:field="*{anioPublicacion}" />
+        <br>
+        <label for="precio">Precio del libro</label>   
+        <input type="number" id="precio" th:field="*{precio}" step="any"/>
+        <br> <br>
+        <br>
+        
+        <input type="submit" value="Guardar"></input>
+        
+</form>
+     
+    
+
+</body>
+</html>
