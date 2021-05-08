@@ -2,6 +2,8 @@ package ar.edu.unju.fi.demoBtp2.model;
 
 import java.time.LocalDate;
 
+import org.springframework.stereotype.Component;
+@Component
 public class Empresaa {
 	private int codigo;
 	private String nombre;
@@ -40,6 +42,11 @@ public class Empresaa {
 	}
 	public void setCiudad(String ciudad) {
 		this.ciudad = ciudad;
+	}
+	@Override
+	public String toString() {
+		return "Empresaa [codigo=" + codigo + ", nombre=" + nombre + ", fechaInicio=" + fechaInicio + ", ciudad="
+				+ ciudad + "]";
 	}
 	
 	
